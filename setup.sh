@@ -14,15 +14,17 @@ echo "export KUBECONFIG=$KUBECONFIG" >> .env
 if [ -z $CLUSTER_TYPE ]; then
 
     echo "## Do you want to create a KinD (local), EKS, GKE, or no cluster (choose none if you already have one)?" | gum format
-    CLUSTER_TYPE=$(gum choose "kind" "eks" "gke" "aks" "none")
+    CLUSTER_TYPE=$(gum choose "minikube" "kind" "eks" "gke" "aks" "none")
 
 fi
 
 echo "export CLUSTER_TYPE=$CLUSTER_TYPE" >> .env
 
-if [[ "$CLUSTER_TYPE" == "kind" ]]; then
+if [[ "$CLUSTER_TYPE" == "minikube" ]]; then
 
-    kind create cluster
+    minikube start --driver=docker
+    minikube status | grep "kubeconfig"
+    minikube update-context
 
 elif [[ "$CLUSTER_TYPE" == "eks" ]]; then
 
