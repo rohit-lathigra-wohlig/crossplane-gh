@@ -20,11 +20,11 @@ fi
 
 echo "export CLUSTER_TYPE=$CLUSTER_TYPE" >> .env
 
-if [[ "$CLUSTER_TYPE" == "minikube" ]]; then
+if [[ "$CLUSTER_TYPE" == "kind" ]]; then
 
-    minikube start --driver=docker
-    minikube status | grep "kubeconfig"
-    minikube update-context
+    kind create cluster
+    # minikube status | grep "kubeconfig"
+    # minikube update-context
 
 elif [[ "$CLUSTER_TYPE" == "eks" ]]; then
 
