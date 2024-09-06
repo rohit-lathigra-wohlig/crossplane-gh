@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: dot-github-vfarcic
+  name: dot-github-rohit-lathigra-wohlig
   description: Silly description of dot-github
   annotations:
-    github.com/project-slug: vfarcic/crossplane-gh
+    github.com/project-slug: rohit-lathigra-wohlig/crossplane-gh
     backstage.io/kubernetes-id: dot
     backstage.io/kubernetes-namespace: git-repos
     backstage.io/kubernetes-label-selector: app.kubernetes.io/name=dot-github
 spec:
   type: infra
   lifecycle: production
-  owner: vfarcic/crossplane-gh
+  owner: rohit-lathigra-wohlig/crossplane-gh
   system: DevOpsCatalog

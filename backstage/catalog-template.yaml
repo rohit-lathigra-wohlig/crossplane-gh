@@ -1,11 +1,11 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: dot-github-template-vfarcic
-  title: dot-github-template-vfarcic
+  name: dot-github-template-rohit-lathigra-wohlig
+  title: dot-github-template-rohit-lathigra-wohlig
   description: Create and Manage GitHub repositories
 spec:
-  owner: vfarcic/crossplane-gh
+  owner: rohit-lathigra-wohlig/crossplane-gh
   type: service
   parameters:
     - title: Service Definition
@@ -53,7 +53,7 @@ spec:
           properties:
             user:
               type: string
-              default: vfarcic
+              default: rohit-lathigra-wohlig
         gitops:
           type: object
           properties:
@@ -63,7 +63,7 @@ spec:
               pattern: '^(true|false)*$'
             user:
               type: string
-              default: vfarcic
+              default: rohit-lathigra-wohlig
             repo:
               type: string
               default: crossplane-gh

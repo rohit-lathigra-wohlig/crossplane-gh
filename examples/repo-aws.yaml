@@ -17,8 +17,8 @@ spec:
       provider: aws
       version: "16.2"
     repo:
-      user: vfarcic
+      user: rohit-lathigra-wohlig
     gitops:
       enabled: true
-      user: vfarcic
+      user: rohit-lathigra-wohlig
       repo: crossplane-gh
